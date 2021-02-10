@@ -5,6 +5,7 @@
   - [[#select-the-version-of-the-docker-image][Select the version of the docker image]]
   - [[#set-container-name][Set container name]]
   - [[#pull-the-docker-image][Pull the docker image]]
+  - [[#configure-couchdb][Configure CouchDB]]
   - [[#references][References]]
 
 ** Select the version of the docker image
@@ -24,6 +25,15 @@ NAME=couchdb
 
 #+BEGIN_SRC sh
 docker pull $IMAGE:$TAG
+#+END_SRC
+
+** Configure CouchDB
+
+Contents of the .env file.
+
+#+BEGIN_SRC conf
+COUCHDB_USER=user
+COUCHDB_PASSWORD=ui1vMU9B5ZPRpHAepXWkPkDf
 #+END_SRC
 
 ** References
