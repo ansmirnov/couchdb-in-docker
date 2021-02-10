@@ -9,6 +9,7 @@
   - [[#set-the-local-data-directory][Set the local data directory]]
   - [[#run-couchdb][Run CouchDB]]
   - [[#inspect-the-container][Inspect the container]]
+  - [[#kill-the-container][Kill the container]]
   - [[#references][References]]
 
 ** Select the version of the docker image
@@ -56,6 +57,12 @@ docker run --rm -d --net host --name $NAME --env-file .env \
 
 #+BEGIN_SRC sh
 docker inspect $NAME
+#+END_SRC
+
+** Kill the container
+
+#+BEGIN_SRC sh
+docker kill $NAME
 #+END_SRC
 
 ** References
