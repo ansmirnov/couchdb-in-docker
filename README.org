@@ -1,1 +1,2 @@
 #+TITLE: CouchDB in docker
+#+PROPERTY: header-args :session *shell docker* :results silent raw
