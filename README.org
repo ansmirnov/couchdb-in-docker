@@ -31,9 +31,9 @@ docker pull $IMAGE:$TAG
 
 Contents of the .env file.
 
-#+BEGIN_SRC conf
+#+BEGIN_SRC conf :tangle .env.dist
 COUCHDB_USER=user
-COUCHDB_PASSWORD=ui1vMU9B5ZPRpHAepXWkPkDf
+COUCHDB_PASSWORD=secretpassword
 #+END_SRC
 
 ** References
