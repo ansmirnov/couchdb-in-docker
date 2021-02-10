@@ -7,6 +7,7 @@
   - [[#pull-the-docker-image][Pull the docker image]]
   - [[#configure-couchdb][Configure CouchDB]]
   - [[#set-the-local-data-directory][Set the local data directory]]
+  - [[#run-couchdb][Run CouchDB]]
   - [[#references][References]]
 
 ** Select the version of the docker image
@@ -41,6 +42,13 @@ COUCHDB_PASSWORD=secretpassword
 
 #+BEGIN_SRC sh
 LOCAL_DATA_DIR=`pwd`/data
+#+END_SRC
+
+** Run CouchDB
+
+#+BEGIN_SRC sh
+docker run -d --net host -v "$LOCAL_DATA_DIR:/opt/couchdb/data" \
+    --env-file .env $IMAGE:$TAG
 #+END_SRC
 
 ** References
