@@ -47,8 +47,8 @@ LOCAL_DATA_DIR=`pwd`/data
 ** Run CouchDB
 
 #+BEGIN_SRC sh
-docker run -d --net host -v "$LOCAL_DATA_DIR:/opt/couchdb/data" \
-    --env-file .env $IMAGE:$TAG
+docker run --rm -d --net host --name $NAME --env-file .env \
+    -v "$LOCAL_DATA_DIR:/opt/couchdb/data" $IMAGE:$TAG
 #+END_SRC
 
 ** References
