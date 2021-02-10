@@ -1,4 +1,4 @@
-#+TITLE: CouchDB in docker
+#+TITLE: Running CouchDB in docker
 #+PROPERTY: header-args :session *shell docker* :results silent raw
 
 ** Contents                                                           :TOC_3:
