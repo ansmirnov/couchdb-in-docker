@@ -7,6 +7,7 @@
   - [[#pull-the-docker-image][Pull the docker image]]
   - [[#configure-couchdb][Configure CouchDB]]
   - [[#set-the-local-data-directory][Set the local data directory]]
+  - [[#set-the-network-parameters][Set the network parameters]]
   - [[#run-couchdb][Run CouchDB]]
   - [[#inspect-the-container][Inspect the container]]
   - [[#kill-the-container][Kill the container]]
@@ -47,10 +48,17 @@ COUCHDB_PASSWORD=secretpassword
 LOCAL_DATA_DIR=`pwd`/data
 #+END_SRC
 
+** Set the network parameters
+
+#+BEGIN_SRC sh
+INTERFACE=127.0.0.1
+PORT=5984
+#+END_SRC
+
 ** Run CouchDB
 
 #+BEGIN_SRC sh
-docker run -d --name $NAME --env-file .env -p 127.0.0.1:5984:5984 \
+docker run -d --name $NAME --env-file .env -p $INTERFACE:$PORT:5984 \
     -v "$LOCAL_DATA_DIR:/opt/couchdb/data" $IMAGE:$TAG
 #+END_SRC
 
