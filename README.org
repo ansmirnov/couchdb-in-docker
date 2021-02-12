@@ -10,6 +10,7 @@
   - [[#set-the-network-parameters][Set the network parameters]]
   - [[#run-couchdb][Run CouchDB]]
   - [[#inspect-the-container][Inspect the container]]
+  - [[#see-the-container-logs][See the container logs]]
   - [[#kill-the-container][Kill the container]]
   - [[#remove-the-container][Remove the container]]
   - [[#references][References]]
@@ -66,6 +67,12 @@ docker run -d --name $NAME --env-file .env -p $INTERFACE:$PORT:5984 \
 
 #+BEGIN_SRC sh
 docker inspect $NAME
+#+END_SRC
+
+** See the container logs
+
+#+BEGIN_SRC sh
+docker logs $NAME
 #+END_SRC
 
 ** Kill the container
